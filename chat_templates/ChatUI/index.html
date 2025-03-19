@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -11,76 +11,72 @@
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-dark navbar-expand-md fixed-top" style=" padding-left: 150px; padding-right: 155px;">
+    <nav class="navbar navbar-dark navbar-expand-md fixed-top" style="padding-left: 150px; padding-right: 155px;">
         <div class="container-fluid dropdown-hover d-flex justify-content-between align-items-center">
             <!-- Logo and Text -->
-            <a href="#" class="navbar-brand d-flex align-items-center ms-5" style="gap: 7px;">
-                <img src="assets/images/logoBW.png" class="weblogo" />
-                <img src="assets/images/logoBW.png" class="moblogo" />
-                <img src="./assets/images/backgrounds/CARBON6 (1).png" alt="">
+            <a href="/" class="navbar-brand d-flex align-items-center ms-5" style="gap: 7px;">
+                <img src="assets/images/logoBW.png" class="weblogo" alt="CARBON6 Logo" />
+                <img src="assets/images/logoBW.png" class="moblogo" alt="CARBON6 Mobile Logo" />
+                <img src="./assets/images/backgrounds/CARBON6 (1).png" alt="CARBON6 Text" />
             </a>
 
             <!-- Navbar menu centered -->
             <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
                 <ul class="navbar-nav text-center">
-                    <li class="nav-item"><a href="#" class="nav-link" style="color: #FFF;
-font-family: Inter;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;">Product</a>
+                    <li class="nav-item"><a href="#features" class="nav-link"
+                            style="color: #FFF;font-family: Inter;font-size: 16px;font-style: normal;font-weight: 400;line-height: normal;">Product</a>
                     </li>
-                    <li class="nav-item"><a href="#" class="nav-link"
+                    <li class="nav-item"><a href="#blogs" class="nav-link"
                             style="color: #FFF;font-family: Inter;font-size: 16px;font-style: normal;font-weight: 400;line-height: normal;">Blogs</a>
                     </li>
-                    <li class="nav-item"><a href="#" class="nav-link"
+                    <li class="nav-item"><a href="#contact" class="nav-link"
                             style="color: #FFF;font-family: Inter;font-size: 16px;font-style: normal;font-weight: 400;line-height: normal;">Contact
                             Us</a></li>
                 </ul>
             </div>
 
             <!-- Toggler and buttons -->
-            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#a">
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarContent">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="header-buttons d-none d-md-flex me-5" style="font-size: 15px;  font-weight: 100;">
-                <button class="btn  me-2" style="border-radius: 4px;
-background: rgba(255, 255, 255, 0.10); color: #FFF;">Log In</button>
-                <button class="btn" style="border-radius: 4px;
-background: #FFF;">Book a Demo</button>
+            <div class="header-buttons d-none d-md-flex me-5" style="font-size: 15px; font-weight: 100;">
+                <a href="/project/signIN.html" class="btn me-2"
+                    style="border-radius: 4px;background: rgba(255, 255, 255, 0.10); color: #FFF;">Log In</a>
+                <a href="#" class="btn" style="border-radius: 4px;background: #FFF;">Book a Demo</a>
             </div>
         </div>
-        <!-- Mega Menu -->
+        <!-- Mega Menu --> 
         <div class="dropdown">
             <div class="dropdown-container">
-
                 <ul class="dropdown-column">
-                    <li><a href="#">Features</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <!-- <li><a href="https://chat.carbon6.pro/chat/new">ESG Co-pilot</a></li> -->
                     <li><a href="/chat_ui">ESG Co-pilot</a></li>
-                    <li><a href="#">OCR</a></li>
+                    <li><a href="#ocr">OCR</a></li>
                     <li><a href="/maps1">Satellite Emission Tracking</a></li>
                 </ul>
                 <ul class="dropdown-column">
-                    <li><a href="#">Latest Blogs</a></li>
-                    <li><a href="#">Blog 1</a></li>
-                    <li><a href="#">Blog 2</a></li>
-                    <li><a href="#">Blog 3</a></li>
+                    <li><a href="#blogs">Latest Blogs</a></li>
+                    <li><a href="#blog1">Blog 1</a></li>
+                    <li><a href="#blog2">Blog 2</a></li>
+                    <li><a href="#blog3">Blog 3</a></li>
                 </ul>
                 <ul class="dropdown-column">
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Mission</a></li>
-                    <li><a href="#">Vision</a></li>
-                    <li><a href="#">Careers</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#mission">Mission</a></li>
+                    <li><a href="#vision">Vision</a></li>
+                    <li><a href="#careers">Careers</a></li>
                 </ul>
                 <ul class="dropdown-column">
-                    <li><a href="#">Clients</a></li>
-                    <li><a href="#">Testimonials</a></li>
-                    <li><a href="#">How It Works</a></li>
+                    <li><a href="#clients">Clients</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
                 </ul>
             </div>
             <div id="toggle-close" class="d-flex flex-1"></div>
@@ -90,76 +86,53 @@ background: #FFF;">Book a Demo</button>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-container " style="padding-left: 80px;">
-            <button class="hero-btn">
+        <div class="hero-container" style="padding-left: 80px;">
+            <button class="hero-btn" onclick="window.location.href='https://chat.carbon6.pro/chat/new'">
                 Try Demo <img src="assets/images/arrow_outward.png" alt="arrow" class="btn-arrow" />
             </button>
 
-            <h1 class="hero-headline" style="color: #161616;
-            font-family: 'IBM Plex Sans';
-            color: rgba(255, 255, 255, 0.80);
-            font-size: 30px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;line-height: var(--Display-Large-Line-Height, 44px); /* 160% */">Manage your emissions
-                using<br> artificial and
-                satellite intelligence</h1>
-            <p class="hero-subheadline"
-                style="color: rgba(255, 255, 255, 0.80);font-family: 'IBM Plex Sans';font-size: 20px;font-style: normal;font-weight: 400;line-height: var(--Headline-Medium-Line-Height, 36px); /* 150% */">
-                Monitor, manage and mitigate your emission inventory with<br> AI-propelled data collection, processing
-                and reporting.
+            <h1 class="hero-headline" style="color: rgba(255, 255, 255, 0.80);font-family: 'IBM Plex Sans';font-size: 30px;font-style: normal;font-weight: 400;line-height: var(--Display-Large-Line-Height, 44px);">
+                Chat with company ESG data<br>using artificial intelligence
+            </h1>
+            <p class="hero-subheadline" style="color: rgba(255, 255, 255, 0.80);font-family: 'IBM Plex Sans';font-size: 20px;font-style: normal;font-weight: 400;line-height: var(--Headline-Medium-Line-Height, 36px);">
+                Engage with company data naturally—ask questions in plain language<br>and extract key insights as if consulting an expert
             </p>
         </div>
     </section>
     <br><br>
     <!--hero section end-->
+
     <div class="container-fluid content-section mt-5">
         <div class="row">
             <div class="col-md-12">
-                <p style="color: #161616;
-font-family: 'IBM Plex Sans';
-font-size: 30px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;">A completely automated solution</p>
+                <p style="color: #161616;font-family: 'IBM Plex Sans';font-size: 30px;font-style: normal;font-weight: 400;line-height: normal;">
+                    A completely automated solution
+                </p>
             </div>
-        </div><!--row end-->
+        </div>
         <div class="row">
             <div class="col-md-10">
-                <p style="color: rgba(22, 22, 22, 0.80);
-font-family: 'IBM Plex Sans';
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;">An integrated platform that combines satellite
-                    analytics with AI that covers all scopes</p>
+                <p style="color: rgba(22, 22, 22, 0.80);font-family: 'IBM Plex Sans';font-size: 20px;font-style: normal;font-weight: 400;line-height: normal;">
+                    An integrated platform that combines satellite analytics with AI that covers all scopes
+                </p>
             </div>
-        </div><!--row end-->
-    </div><!--container end-->
-
+        </div>
+    </div>
 
     <div class="slider-container">
         <!-- Slide 1 -->
-        <div class="slider-box">
+        <div class="slider-box" onclick="window.location.href='https://chat.carbon6.pro/chat/new'" style="cursor: pointer;">
             <img class="background-slider" src="./assets/images/backgrounds/box1.jpg" alt="Background">
             <div class="upper-image logo">
-                <img src="./assets/images/backgrounds/ask_me.png" alt="CH4 Icon">
+                <img src="./assets/images/backgrounds/ask_me.png" alt="Chat Icon">
             </div>
             <div class="text">
-                <h5 style="color: #FFF;
-font-family: 'IBM Plex Sans';
-font-size: 20px;
-font-style: normal;
-font-weight: 200;
-line-height: 33.054px; /* 165.27% */">Auto-data extraction</h5>
-                <p style="color: rgba(255, 255, 255, 0.80);
-font-family: Inter;
-font-size: 14px;
-font-style: normal;
-font-weight: 200;
-line-height: 24px; /* 171.429% */">Our AI is capable of extracting data from all sorts of uploaded files and from API
-                    integrations with
-                    the platform</p>
+                <h5 style="color: #FFF;font-family: 'IBM Plex Sans';font-size: 20px;font-style: normal;font-weight: 200;line-height: 33.054px;padding-bottom: 10px;">
+                    Chat with company ESG data
+                </h5>
+                <p style="color: rgba(255, 255, 255, 0.80);font-family: Inter;font-size: 14px;font-style: normal;font-weight: 200;line-height: 24px;">
+                    Engage with company data naturally—ask questions in plain language and extract key insights as if consulting an expert
+                </p>
             </div>
         </div>
 
@@ -167,9 +140,7 @@ line-height: 24px; /* 171.429% */">Our AI is capable of extracting data from all
         <div class="slider-box">
             <img class="background-slider" src="./assets/images/backgrounds/box2.jpg" alt="Background">
             <div class="upper-image with-vector">
-                <svg style="position: absolute;
-                top: 10;
-    left: 13px;  " xmlns="http://www.w3.org/2000/svg" width="110" height="116" viewBox="0 0 126 126" fill="none">
+                <svg style="position: absolute;top: 10;left: 13px;" xmlns="http://www.w3.org/2000/svg" width="110" height="116" viewBox="0 0 126 126" fill="none">
                     <g filter="url(#filter0_b_4_316)">
                         <circle cx="63" cy="63" r="63" fill="black" fill-opacity="0.4" />
                     </g>
@@ -179,36 +150,29 @@ line-height: 24px; /* 171.429% */">Our AI is capable of extracting data from all
                             <feFlood flood-opacity="0" result="BackgroundImageFix" />
                             <feGaussianBlur in="BackgroundImageFix" stdDeviation="8.69841" />
                             <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_4_316" />
-                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_4_316"
-                                result="shape" />
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_4_316" result="shape" />
                         </filter>
                     </defs>
                 </svg>
                 <div class="vector-container">
-                    <img src="./assets/images/backgrounds/Satellite Signal (1).png" style="width: 50px; 
-height: 50px;
-flex-shrink: 0;" alt="vector icon">
+                    <img src="./assets/images/backgrounds/Satellite Signal (1).png" style="width: 50px;height: 50px;flex-shrink: 0;" alt="Satellite Icon">
                 </div>
             </div>
             <div class="text">
-                <h5>Real-time satellite emission tracking</h5>
-                <p style="color: rgba(255, 255, 255, 0.80);
-                font-family: Inter;
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 200;
-                line-height: 24px; /* 171.429% */">Our AI is capable of extracting data from all sorts of uploaded
-                    files and from API integrations with
-                    the platform</p>
+                <h5 style="color: #FFF;font-family: 'IBM Plex Sans';font-size: 20px;font-style: normal;font-weight: 200;line-height: 33.054px;padding-bottom: 10px;">
+                    Real-time satellite emission tracking
+                </h5>
+                <p style="color: rgba(255, 255, 255, 0.80);font-family: Inter;font-size: 14px;font-style: normal;font-weight: 200;line-height: 24px;">
+                    Real-time tracking of point-source emissions using satellite data. Get alerts and global comparisons for actionable insights.
+                </p>
             </div>
         </div>
+
         <!-- Slide 3 -->
         <div class="slider-box">
             <img class="background-slider" src="./assets/images/backgrounds/box3.jpg" alt="Background">
             <div class="upper-image with-vector">
-                <svg style="position: absolute;
-                left: 13px;" xmlns="http://www.w3.org/2000/svg" width="110" height="116" viewBox="0 0 126 126"
-                    fill="none">
+                <svg style="position: absolute;left: 13px;" xmlns="http://www.w3.org/2000/svg" width="110" height="116" viewBox="0 0 126 126" fill="none">
                     <g filter="url(#filter0_b_4_316)">
                         <circle cx="63" cy="63" r="63" fill="black" fill-opacity="0.4" />
                     </g>
@@ -218,107 +182,26 @@ flex-shrink: 0;" alt="vector icon">
                             <feFlood flood-opacity="0" result="BackgroundImageFix" />
                             <feGaussianBlur in="BackgroundImageFix" stdDeviation="8.69841" />
                             <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_4_316" />
-                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_4_316"
-                                result="shape" />
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_4_316" result="shape" />
                         </filter>
                     </defs>
                 </svg>
                 <div class="vector-container">
-                    <img src="./assets/images/backgrounds/CH4.png" style="width: 50px; height: 50px;flex-shrink: 0;"
-                        alt="vector icon">
+                    <img src="./assets/images/backgrounds/CH4.png" style="width: 50px;height: 50px;flex-shrink: 0;" alt="Methane Icon">
                 </div>
             </div>
             <div class="text">
-                <h5>Real-time satellite emission tracking</h5>
-                <p style="color: rgba(255, 255, 255, 0.80);
-                font-family: Inter;
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 200;
-                line-height: 24px; /* 171.429% */">Our AI is capable of extracting data from all sorts of uploaded
-                    files and from API integrations with
-                    the platform</p>
+                <h5 style="color: #FFF;font-family: 'IBM Plex Sans';font-size: 20px;font-style: normal;font-weight: 200;line-height: 33.054px;padding-bottom: 10px;">
+                    Methane Leak Alerts
+                </h5>
+                <p style="color: rgba(255, 255, 255, 0.80);font-family: Inter;font-size: 14px;font-style: normal;font-weight: 200;line-height: 24px;">
+                    Get real-time alerts for methane leaks and track emissions with advanced satellite monitoring technology
+                </p>
             </div>
         </div>
-        <!-- Slide 4 -->
-        <!-- Slide 4 -->
-        <div class="slider-box">
-            <img class="background-slider" src="./assets/images/backgrounds/box4.jpg" alt="Background">
-            <div class="upper-image with-vector">
-                <div class="vector-container_4">
-                    <img src="./assets/images/backgrounds/exporting_data.png"
-                        style="width: 280px; height: 141px;flex-shrink: 0;" alt="vector icon">
-                </div>
-            </div>
-            <div class="text">
-                <h5>Real-time satellite emission tracking</h5>
-                <p style="color: rgba(255, 255, 255, 0.80);
-                font-family: Inter;
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 200;
-                line-height: 24px; /* 171.429% */">Our AI is capable of extracting data from all sorts of uploaded
-                    files and from API integrations with
-                    the platform</p>
-            </div>
-        </div>
-
-
-  <!-- Slide 5 -->
-
-        <!-- Modified Slide 5 -->
-        <div class="slider-box">
-            <img class="background-slider" src="./assets/images/backgrounds/box5.jpg" alt="Background">
-            <div class="upper-image5 with-vector">                
-                <div class="vector-container_5">
-                    <img src="./assets/images/backgrounds/box5_5.png" style="width: 200px; height: auto;"
-                        alt="vector icon">
-                </div>
-            </div>
-            <div class="text">
-                <h5>Real-time satellite emission tracking</h5>
-                <p style="color: rgba(255, 255, 255, 0.80);
-                font-family: Inter;
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 200;
-                line-height: 24px; /* 171.429% */">Our AI is capable of extracting data from all sorts of uploaded
-                    files and from API integrations with
-                    the platform</p>
-            </div>
-        </div>
-
-         <!-- Slide 6 -->
-         <div class="slider-box">
-            <img class="background-slider" src="./assets/images/backgrounds/box1.jpg" alt="Background">
-            <div class="upper-image with-vector">
-                <div class="vector-container_6">
-                    <img src="./assets/images/backgrounds/last_box.png"
-                        style="width: 280px; height: 134px;flex-shrink: 0;" alt="vector icon">
-                </div>
-            </div>
-            <div class="text">
-                <h5>Real-time satellite emission tracking</h5>
-                <p style="color: rgba(255, 255, 255, 0.80);
-                font-family: Inter;
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 200;
-                line-height: 24px; /* 171.429% */">Our AI is capable of extracting data from all sorts of uploaded
-                    files and from API integrations with
-                    the platform</p>
-            </div>
-        </div>
-      
-
-
-        <!-- Slide 6 -->
-         
     </div>
-    <!--slider  container end-->
-<br><br>
 
-    <div class="container-fluid mt-5"  style="padding-left: 211px;">
+    <div class="container-fluid mt-5" style="padding-left: 211px;">
         <div class="row grp-text">
             <div class="col-md-12">
                 <p style="color: #161616;
@@ -328,14 +211,12 @@ flex-shrink: 0;" alt="vector icon">
                 font-weight: 400;
                 line-height: normal;">Generate audit ready GHG emission reports using AI</p>
             </div>
-
         </div><!--row end-->
         <div class="row grp mt-5">
             <div class="col-md-12" style="max-width: 100%; padding-right: 211px;">
                 <center>
-            <img src="./assets/images/backgrounds/Group.png" class="w-100"
-                        style="max-width:950px; height:40px" alt="image error">
-                    </center>
+                    <img src="./assets/images/backgrounds/Group.png" class="w-100" style="max-width:950px; height:40px" alt="image error">
+                </center>
             </div>
         </div><!--row end-->
     </div> <!--photos container end-->
@@ -354,15 +235,13 @@ flex-shrink: 0;" alt="vector icon">
         </div>
     </div><!--how it  works-->
 
-
-
     <div class="container-fluid layout-daba mt-5">
         <div class="layout-container mt-5">
             <div class="row layout-row">
                 <!-- Left Section with Boxes -->
                 <div class="col-12 col-md-3 parent" style="position: relative;right: 19px;">
                     <div class="background"></div>
-                    <div class="child" onclick="moveBackground(this)"  data-image="./assets/images/backgrounds/stallite.jpg">
+                    <div class="child" onclick="moveBackground(this)" data-image="./assets/images/backgrounds/stallite.jpg">
                         <h5 style="line-height: 1.4;">Satellite Tracking</h5>
                         <p style="font-size: 14px; font-weight: 300; color: rgba(22, 22, 22, 0.80);font-family: 'Inter', sans-serif;">
                             An integrated platform that combines satellite analytics with AI that covers all scopes.
@@ -392,7 +271,7 @@ flex-shrink: 0;" alt="vector icon">
         </div>
     </div>
     <!--sliding layout container end-->
-<br><br><br>
+    <br><br><br>
 
     <div class="container-fluid mt-5">
         <div class="row">
@@ -407,16 +286,13 @@ flex-shrink: 0;" alt="vector icon">
         </div>
     </div><!--title container end-->
 
-    <div class="four-box-container ">
+    <div class="four-box-container">
         <div class="card-up" onmouseover="hoverEffect(this)" onmouseout="removeEffect(this)">
             <img src="./assets/images/backgrounds/pic1.jpeg" class="card-up-img1" alt="Background image">
             <img src="./assets/images/backgrounds/pic11.png" class="pic-inside" alt="Center image">
             <div class="text-overlay">
                 <h4>Visualise and interact with company data through natural language</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, cumque voluptas harum
-                    dignissimos in blanditiis tempora corporis quae et molestias aliquam distinctio tempore, eum, ut
-                    dolorum
-                    deserunt ratione ipsam? Ratione?</p>
+                <p>Engage with your data through intuitive natural language queries, making complex data analysis accessible and efficient for all team members.</p>
             </div>
         </div>
 
@@ -425,21 +301,16 @@ flex-shrink: 0;" alt="vector icon">
             <img src="./assets/images/backgrounds/pic22.png" class="pic-inside" alt="Center image">
             <div class="text-overlay">
                 <h4>Generate AI-powered policy compliant reports in an instant</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, cumque voluptas harum
-                    dignissimos in blanditiis tempora corporis quae et molestias aliquam distinctio tempore, eum, ut
-                    dolorum
-                    deserunt ratione ipsam? Ratione?</p>
+                <p>Create comprehensive, policy-compliant reports automatically with our AI system, saving time while ensuring accuracy and regulatory compliance.</p>
             </div>
         </div>
+
         <div class="card-up" onmouseover="hoverEffect(this)" onmouseout="removeEffect(this)">
             <img src="./assets/images/backgrounds/pic3.jpeg" class="card-up-img1" alt="Background image">
             <img src="./assets/images/backgrounds/33.png" class="pic-inside" alt="Center image">
             <div class="text-overlay">
-                <h4>Let AI manage all the emission factors and other metrics </h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, cumque voluptas harum
-                    dignissimos in blanditiis tempora corporis quae et molestias aliquam distinctio tempore, eum, ut
-                    dolorum
-                    deserunt ratione ipsam? Ratione?</p>
+                <h4>Let AI manage all the emission factors and other metrics</h4>
+                <p>Our AI system automatically handles emission factors and metrics, ensuring accurate calculations and up-to-date compliance with industry standards.</p>
             </div>
         </div>
 
@@ -448,10 +319,7 @@ flex-shrink: 0;" alt="vector icon">
             <img src="./assets/images/backgrounds/pic44.png" class="pic-inside" alt="Center image">
             <div class="text-overlay">
                 <h4>Upload raw unorganized company data directly- our AI will do the rest</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, cumque voluptas harum
-                    dignissimos in blanditiis tempora corporis quae et molestias aliquam distinctio tempore, eum, ut
-                    dolorum
-                    deserunt ratione ipsam? Ratione?</p>
+                <p>Simply upload your raw data and let our AI system organize, analyze, and transform it into actionable insights and compliant reports.</p>
             </div>
         </div>
     </div><!--four box container end-->
@@ -472,15 +340,14 @@ flex-shrink: 0;" alt="vector icon">
     </div><!--how it  works-->
 
     <div class="container-fluid mt-5 img-container">
-        <img src="./assets/images/public/Group 192.png" class="img-container-img" alt="Group 192">
+        <img src="./assets/images/public/Group 192.png" class="img-container-img" alt="How it works diagram">
     </div><!--complicated picture container-->
     <br><br><br>
 
     <div class="container-fluid mt-5">
         <div class="row">
             <div class="col-12">
-                <h3 style="
-                padding-left: 211px;
+                <h3 style="padding-left: 211px;
                 color: #161616;
                 font-family: 'IBM Plex Sans';
                 font-size: 30px;
@@ -497,17 +364,12 @@ flex-shrink: 0;" alt="vector icon">
                     <div class="card-content">
                         <h5 class="card-title">CORSIA and its impact on international aviation</h5>
                         <p class="card-description">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
-                            explicabo architecto voluptatem inventore omnis eaque, sit esse laborum.
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla fugit facilis architecto,
-                            numquam exercitationem hic est maxime quidem.
+                            Explore how CORSIA regulations are reshaping international aviation emissions management and what it means for the industry's sustainable future.
                         </p>
                         <button class="card-btn-static">
                             Read now
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="white" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" />
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </button>
                     </div>
@@ -521,16 +383,12 @@ flex-shrink: 0;" alt="vector icon">
                     <div class="card-content">
                         <h5 class="card-title">Global sustainability initiatives</h5>
                         <p class="card-description">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
-                            explicabo architecto voluptatem inventore omnis eaque, sit esse laborum.
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla fugit facilis architecto.
+                            A comprehensive overview of major global sustainability initiatives and their impact on corporate environmental responsibility and reporting.
                         </p>
                         <button class="card-btn-static">
                             Read now
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="white" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" />
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </button>
                     </div>
@@ -544,16 +402,12 @@ flex-shrink: 0;" alt="vector icon">
                     <div class="card-content">
                         <h5 class="card-title">Industrial impact on climate change</h5>
                         <p class="card-description">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
-                            explicabo architecto voluptatem inventore omnis eaque, sit esse laborum.
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla fugit facilis architecto.
+                            Understanding the role of industrial operations in climate change and innovative solutions for reducing environmental impact.
                         </p>
                         <button class="card-btn-static">
                             Read now
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="white" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" />
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </button>
                     </div>
@@ -569,11 +423,10 @@ flex-shrink: 0;" alt="vector icon">
             <div class="col-md-7 text-white text-background-blur">
                 <p>Experience a seamless carbon reporting,</p>
                 <p>management and offset platform</p>
-                <button class="btn btn-light">Book a Demo</button>
+                <button class="btn btn-light" onclick="window.location.href='https://chat.carbon6.pro/chat/new'">Book a Demo</button>
             </div>
         </div><!--row end-->
     </div><!--last second container-->
-
 
     <footer>
         <div class="container">
@@ -583,7 +436,7 @@ flex-shrink: 0;" alt="vector icon">
                     <ul class="footer-links list-unstyled text-white">
                         <li class="first_link">About Carbon6</li>
                         <li class="footer_links">Why Carbon6</li>
-                        <li class="footer_links"> How it works</li>
+                        <li class="footer_links">How it works</li>
                         <li class="footer_links">Try demo</li>
                         <li class="footer_links">Contact us</li>
                         <li class="footer_links">Linkedin</li>
@@ -595,7 +448,7 @@ flex-shrink: 0;" alt="vector icon">
                         <li class="first_link">Resources</li>
                         <li class="footer_links">Blogs</li>
                         <li class="footer_links">White papers</li>
-                        <li class="footer_links"> Tools</li>
+                        <li class="footer_links">Tools</li>
                     </ul>
                 </div>
                 <div class="col-md-1"></div>
@@ -611,7 +464,7 @@ flex-shrink: 0;" alt="vector icon">
                 <div class="col-md-2">
                     <ul class="footer-links list-unstyled text-white">
                         <li class="first_link">Latest advancements</li>
-                        <li class="footer_links">Term of use </li>
+                        <li class="footer_links">Term of use</li>
                         <li class="footer_links">Privacy policy</li>
                         <li class="footer_links">Other policies</li>
                     </ul>
@@ -620,9 +473,85 @@ flex-shrink: 0;" alt="vector icon">
         </div><!--container end-->
     </footer><!--footer end-->
 
+    <script src="assets/js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navbar = document.querySelector('.navbar');
+            const dropdown = document.querySelector('.dropdown');
+            let isHovered = false;
 
-    <script src="./assets/js/style.js"></script>
+            // Handle hover events
+            navbar.addEventListener('mouseenter', function() {
+                isHovered = true;
+                dropdown.classList.add('show');
+            });
 
+            navbar.addEventListener('mouseleave', function() {
+                isHovered = false;
+                setTimeout(() => {
+                    if (!isHovered) {
+                        dropdown.classList.remove('show');
+                    }
+                }, 100);
+            });
+
+            // Handle scroll events - hide dropdown when scrolling
+            window.addEventListener('scroll', function() {
+                dropdown.classList.remove('show');
+                isHovered = false;
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!navbar.contains(event.target)) {
+                    dropdown.classList.remove('show');
+                    isHovered = false;
+                }
+            });
+            
+            // Prevent dropdown from showing when scrolling back to top
+            dropdown.addEventListener('mouseenter', function() {
+                isHovered = true;
+            });
+            
+            dropdown.addEventListener('mouseleave', function() {
+                isHovered = false;
+                setTimeout(() => {
+                    if (!isHovered) {
+                        dropdown.classList.remove('show');
+                    }
+                }, 100);
+            });
+        });
+
+        // Function to handle background image change for layout section
+        function moveBackground(element) {
+            // Get the image URL from the data attribute
+            const imageUrl = element.getAttribute('data-image');
+            
+            // Find the image container and update its image
+            const imageContainer = document.querySelector('.image-container img');
+            if (imageContainer) {
+                imageContainer.src = imageUrl;
+            }
+            
+            // Add active class to the clicked element and remove from siblings
+            const siblings = element.parentElement.querySelectorAll('.child');
+            siblings.forEach(sibling => {
+                sibling.classList.remove('active');
+            });
+            element.classList.add('active');
+        }
+
+        // Function for hover effect on cards
+        function hoverEffect(element) {
+            element.classList.add('hovered');
+        }
+
+        // Function to remove hover effect
+        function removeEffect(element) {
+            element.classList.remove('hovered');
+        }
+    </script>
 </body>
-
 </html>

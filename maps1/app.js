@@ -60,6 +60,14 @@ function initMap() {
         },
         styles: getMapStyle('roadmap')
     });
+
+    // Add close button event listener
+    document.getElementById('closeEmissions').addEventListener('click', () => {
+        document.getElementById('emissionsData').classList.add('hidden');
+        map.setZoom(5); // Reset to initial zoom level
+        map.setCenter({ lat: 22.3511, lng: 78.6677 }); // Reset to initial center
+    });
+
     // Load GeoJSON (only call this once)
     loadGeoJson();
 
@@ -68,7 +76,7 @@ let allFeatures = []; // Store all features globally
 // Load GeoJSON data and update dynamically
 async function loadGeoJson() {
     try {
-        const response = await fetch("/maps1/data.geojson"); // Fetch the file
+        const response = await fetch("/maps1/static/data.geojson"); // Updated path to match static file configuration
         const geojsonData = await response.json(); // Convert to JSON
         console.log("Loaded GeoJSON Data:", geojsonData); // Debugging output
 
@@ -409,25 +417,26 @@ function showMoreDetails(feature) {
 
 // Display modal with data
 function displayModal(data) {
+    console.log("EmissionsDetails:", data.EmissionsDetails); // Debugging output
     const modalContent = document.getElementById('modalContent');
-    if (data.error) {
-        modalContent.innerHTML = `<div class="alert-error">${data.error}</div>`;
-    } else {
-        const emissionYear = data.EmissionsDetails.length > 0 ? data.EmissionsDetails[0].Year : "N/A";
-        modalContent.innerHTML = `
-            <h4 class="modal-title">${data.Name}</h4>
-            <p><strong>Sector:</strong> ${data.Sector}</p>
-            <p><strong>Year:</strong> ${emissionYear}</p>
-            <div class="emissions-details">
-                ${data.EmissionsDetails.map(e => `
-                    <div class="emission-item">
-                        <strong>${e.Gas}:</strong> 
-                        <span>${formatNumber(e.EmissionsQuantity)} metric tons</span>
-                    </div>
-                `).join('')}
-            </div>
-        `;
-    }
+    const emissionYear = data.Year && data.Year !== "N/A" ? `Year: ${data.Year}` : "Year: Not Available";
+
+    modalContent.innerHTML = `
+        <h4 class="modal-title">${data.Name}</h4>
+        <div class="sector-badge" style="background-color: ${sectorColors[data.Sector] || '#808080'}">
+            ${data.Sector}
+        </div>
+        <p><strong>${emissionYear}</strong></p>
+        <div class="emissions-details">
+            ${data.EmissionsDetails.map(e => `
+                <div class="emission-item">
+                    <strong>${e.Gas.toUpperCase()}:</strong> 
+                    <span>${formatNumber(e.EmissionsQuantity)} metric tons</span>
+                </div>
+            `).join('')}
+        </div>
+    `;
+
     document.getElementById('detailsModal').style.display = 'block';
     document.getElementById('modalOverlay').style.display = 'block';
 }
@@ -852,7 +861,7 @@ function displayModal(data) {
         <div class="sector-badge" style="background-color: ${sectorColors[data.Sector] || '#808080'}">
             ${data.Sector}
         </div>
-        <p><strong>${emissionYear}</strong></p> <!-- ✅ Displays Year properly -->
+        <p><strong>${emissionYear}</strong></p>
         <div class="emissions-details">
             ${data.EmissionsDetails.map(e => `
                 <div class="emission-item">
@@ -866,3 +875,4 @@ function displayModal(data) {
     document.getElementById('detailsModal').style.display = 'block';
     document.getElementById('modalOverlay').style.display = 'block';
 }
+
