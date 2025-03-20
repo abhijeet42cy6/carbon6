@@ -29,3 +29,6 @@ build/
 
 # Log files
 *.log 
+
+# Maps directories
+maps0/ 
