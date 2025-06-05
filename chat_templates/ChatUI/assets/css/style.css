@@ -1,0 +1,1032 @@
+/* Hide scrollbar but allow scrolling */
+body {
+    overflow-y: scroll; /* Ensures scrolling works */
+  }
+  
+  body::-webkit-scrollbar {
+    display: none; /* Hides the scrollbar */
+  }
+  
+
+.content-section {
+    padding: 15px 211px;
+}
+
+  .ibm-plex-sans-thin {
+    font-family: "IBM Plex Sans", serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .ibm-plex-sans-extralight {
+    font-family: "IBM Plex Sans", serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .ibm-plex-sans-light {
+    font-family: "IBM Plex Sans", serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .ibm-plex-sans-regular {
+    font-family: "IBM Plex Sans", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .ibm-plex-sans-medium {
+    font-family: "IBM Plex Sans", serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .ibm-plex-sans-semibold {
+    font-family: "IBM Plex Sans", serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .ibm-plex-sans-bold {
+    font-family: "IBM Plex Sans", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .ibm-plex-sans-thin-italic {
+    font-family: "IBM Plex Sans", serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .ibm-plex-sans-extralight-italic {
+    font-family: "IBM Plex Sans", serif;
+    font-weight: 200;
+    font-style: italic;
+  }
+  
+  .ibm-plex-sans-light-italic {
+    font-family: "IBM Plex Sans", serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .ibm-plex-sans-regular-italic {
+    font-family: "IBM Plex Sans", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .ibm-plex-sans-medium-italic {
+    font-family: "IBM Plex Sans", serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .ibm-plex-sans-semibold-italic {
+    font-family: "IBM Plex Sans", serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  .ibm-plex-sans-bold-italic {
+    font-family: "IBM Plex Sans", serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+.dropdown {
+    display: none;
+    /* Initially hide the mega menu */
+    position: absolute;
+    top: 100%;
+    /* Positioned below the navbar */
+    left: 0;
+    width: 100%;
+    /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.635), rgba(0, 0, 0, 0)); */
+    /* Semi-transparent black */
+    /* background-image: url(../images/backgrounds/faded_bg.png); */
+    /* backdrop-filter: blur(10px); */
+    /* Blur effect */
+/* background: url(../images/backgrounds/faded_bg.png); */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.799), rgba(0, 0, 0, 0));
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    z-index: 9999;
+}
+#toggle-close{
+    flex:1;
+    }
+/* Remove this rule to prevent automatic display on hover */
+/* .navbar:hover .dropdown {
+    display: flex;
+    flex-direction: column;
+} */
+
+/* Add this rule to control dropdown display via JavaScript */
+.dropdown.show {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.dropdown-column {
+    list-style: none;
+    padding: 0;
+}
+
+.dropdown-column li {
+    margin-bottom: 10px;
+}
+
+.dropdown-column a {
+    text-decoration: none;
+    color: #ffff;
+}
+
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar */
+.weblogo {
+    width: 20px;
+}
+
+.navbar {
+    height: 65px;
+        background-color: rgba(0, 0, 0, 0.79);
+    backdrop-filter: blur(10px);
+}
+
+.navbar-nav li {
+    padding: 0 30px;
+}
+
+.navbar-nav li a {
+    color: #fff !important;
+    font-weight: 100;
+    font-size: 15px;
+  
+}
+
+.moblogo {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .moblogo {
+        display: block;
+    }
+
+    .navbar {
+        background: #000000ae !important;
+        padding: 0 15px !important;
+    }
+
+    .weblogo {
+        display: none;
+    }
+
+    /* Responsive Mega Dropdown Styles */
+    .dropdown.show { /* This applies when JS makes the mega dropdown visible */
+        overflow-y: auto;
+        height: auto; 
+        max-height: calc(100vh - 65px); /* Assumes navbar height is roughly 65px */
+    }
+
+    .dropdown-container {
+        flex-direction: column; 
+        align-items: flex-start; /* Align stacked columns to the left */
+        padding: 20px; 
+    }
+
+    .dropdown-column {
+        width: 100%; 
+        margin-bottom: 20px; 
+    }
+
+    .dropdown-column:last-child {
+        margin-bottom: 0; 
+    }
+
+    .dropdown-column li a {
+        display: block; /* Make links full width for easier tapping */
+        padding: 10px 0; /* Add vertical padding */
+        color: #FFF; 
+        text-decoration: none; 
+    }
+    .dropdown-column li a:hover {
+        text-decoration: underline; 
+    }
+    
+    /* Adjustments for Bootstrap's collapsible navbar content (#navbarContent) */
+    .navbar-collapse { /* This is what the toggler expands */
+        background-color: rgba(0, 0, 0, 0.95); 
+        margin-top: 0; /* Ensure it's flush with navbar if fixed-top */
+        padding-bottom: 10px; /* Padding at the bottom of the expanded menu */
+        border-top: 1px solid rgba(255, 255, 255, 0.2); 
+        max-height: calc(100vh - 65px); /* Allow scroll within collapsed nav */
+        overflow-y: auto;
+    }
+
+    .navbar-nav { /* The ul inside .navbar-collapse */
+        align-items: flex-start; 
+        padding-top: 10px; /* Padding at the top of the nav list */
+    }
+    
+    .navbar-nav .nav-item {
+        width: 100%; 
+    }
+
+    .navbar-nav .nav-link {
+        padding: 12px 15px; 
+        text-align: left;
+        color: #FFF !important; 
+        font-weight: 400; /* Adjust font weight if needed for mobile */
+    }
+    .navbar-nav .nav-link:hover {
+        background-color: rgba(255, 255, 255, 0.1); 
+    }
+}
+
+
+/* Hero Section */
+.hero {
+    background-image: url('../images/backgrounds/bg1.png');
+    /* Corrected path */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    /* Stack items vertically */
+    justify-content: flex-end;
+    /* Align items towards the bottom */
+    align-items: flex-start;
+    /* Align items towards the left */
+    text-align: left;
+    /* Left-align the text */
+    color: #FFFFFF;
+    padding: 0 20px 20px 20px;
+    /* Remove extra padding, we'll adjust margins for spacing */
+    position: relative;
+    box-sizing: border-box;
+}
+
+.hero-container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 40px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    /* Stack elements vertically */
+    align-items: flex-start;
+    /* Align items to the left */
+    margin-bottom: 30px;
+    /* Adds space between the container and the bottom */
+}
+
+.hero-btn {
+    font-family: 'IBM Plex Sans';
+    font-size: 20px;
+    color: #0B232F;
+    background: #FFFFFF;
+    padding: 12px 30px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+    border: none;
+    margin-bottom: 20px;
+    /* Reduced margin to give space between the button and the headline */
+    width: auto;
+    /* Prevent full width */
+}
+
+.hero-btn:hover {
+    color: #000000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.hero-headline {
+    font-family: 'IBM Plex Sans';
+    font-size: 40px;
+    line-height: 64px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+    /* Increased margin to give more space */
+}
+
+.hero-subheadline {
+    font-family: 'IBM Plex Sans';
+    font-size: 24px;
+    line-height: 36px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 40px;
+    /* Increased margin to give more space */
+}
+
+.btn-arrow {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.hero-btn:hover .btn-arrow {
+    transform: translateX(5px);
+    /* Moves the arrow slightly to the right on hover */
+}
+
+/* slider part */
+        /* Previous styles remain the same */
+        .slider-container {
+            display: flex;
+            overflow-x: auto;
+            padding: 20px;
+            gap: 25px;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            padding-left: 211px;
+            padding-right: 211px;
+        }
+
+        .slider-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .slider-box {
+            position: relative;
+            width: 380px;
+            height: 480px;
+            flex-shrink: 0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .slider-box img.background-slider {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .upper-image {
+            position: absolute;
+            top: 30%;
+            left: 47%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .upper-image.with-vector {
+          position: relative;
+          /* Ensuring this container establishes a positioning context.
+             Width and height should ideally be set to contain the SVG and icon appropriately.
+             For now, relying on existing layout or content to define its size. */
+        }
+
+        .upper-image5 {
+            position: absolute;
+            top: 38%;
+            left: 47%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* First slide specific */
+        .upper-image.logo {
+            width: 246.165px;
+            height: 50.495px;
+        }
+
+        .upper-image.logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        /* Second slide specific */
+        .upper-image.with-vector {
+            position: absolute;
+            width: 126px;
+            height: 126px;
+
+        }
+
+        .upper-image.with-vector .vector-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+            width: 40px;
+            height: 40px;
+        }
+
+        .upper-image.with-vector .vector-container_4 {
+            position: absolute;
+            top: 40%;
+            right: 100%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+            width: 40px;
+            height: 40px;
+        }
+        .upper-image.with-vector .vector-container_6 {
+            position: absolute;
+            top: 32%;
+            right:77%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+            width: 40px;
+            height: 40px;
+        }
+
+        .upper-image.with-vector .vector-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        /* Specific styles for slider 5 */
+        .slider-box:last-child .upper-image.with-vector {
+            width: 300px;
+            height: 300px;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .slider-box:last-child .upper-image.with-vector svg {
+            width: 200px;
+            height: 170px;
+            position: absolute;
+            top: 49%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+        }
+
+        .slider-box:last-child .vector-container_5 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 4;
+            width: 280px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slider-box:last-child .vector-container_5 img {
+            width: 280px;
+            height: auto;
+        }
+
+        .text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            z-index: 3;
+            width: 380px;
+            height: 161px;
+            flex-shrink: 0;        }
+
+        .text h5 {
+            width: 340px;
+            color: #FFF;
+            font-family: "IBM Plex Sans";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 33.054px;
+            margin: 0;
+        }
+
+        .text p {
+            color: rgba(255, 255, 255, 0.8);
+            font-family: Inter;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 24px;
+            margin: 0;
+        }
+
+        /* layout part */
+        .child {
+            width: 100%;
+            min-height: 133px; /* Adjusted to make total height match image */
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .child.active {
+            background-color: rgba(0, 0, 0, 0.05);
+            border-left: 3px solid #000;
+        }
+
+        .child h5 {
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+        }
+
+        .child p {
+            font-size: 0.875rem;
+            margin-bottom: 0;
+            line-height: 1.4;
+        }
+
+        .image-container {
+            height: 400px; /* Same height as 3 child containers (133px * 3 = 399px) */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            padding: 0;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .layout-container {
+            width: 100%;
+            max-width: 1200px;
+            background: #f5f5f5;
+            padding: 20px;
+            margin: 0 auto;
+        }
+
+        .background {
+            position: absolute;
+            width: 108%;
+            background: rgba(128, 128, 128, 0.3);
+            z-index: 2;
+            transition: transform 0.3s ease, height 0.3s ease;
+        }
+
+        .background::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            background-color: rgb(145, 145, 145);
+        }
+
+        .parent {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            height: 400px; /* Match image container height */
+            padding: 0;
+            gap: 0;
+            justify-content: space-between;
+        }
+
+        .layout-row {
+            margin: 0;
+        }
+
+        .col-md-3,
+        .col-md-9 {
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Laptop screens (14-16 inch) */
+        @media (min-width: 1025px) {
+            .layout-daba {
+                padding-left: 211px !important;
+                padding-right: 211px !important;
+            }
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .layout-container {
+                padding: 10px;
+            }
+
+            .child {
+                min-height: 120px;
+                padding: 15px;
+            }
+
+            .image-container {
+                height: 360px;
+                margin-top: 20px;
+            }
+
+            .parent {
+                height: auto;
+                right: 0 !important;
+            }
+
+            .child h5 {
+                font-size: 1.1rem;
+                line-height: 1.3 !important;
+            }
+
+            .child p {
+                width: 100% !important;
+                font-size: 0.75rem !important;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .layout-container {
+                max-width: 95%;
+            }
+
+            .child {
+                min-height: 120px;
+            }
+
+            .image-container {
+                height: 360px;
+            }
+
+            .parent {
+                height: 360px;
+            }
+        }
+/* four big boxes */
+
+
+.four-box-container {
+    /* max-width: 1200px; */
+    margin: 50px auto;
+    padding: 0 10vw; /* Responsive padding */
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Styles to fix inner card clipping issue */
+.four-box-container .card-up {
+  position: relative !important;
+  overflow: visible !important;
+}
+
+.four-box-container .card-up .pic-inside {
+  top: 40% !important; /* Adjust this value if the image is still clipped or too low */
+}
+/* End of styles for inner card clipping issue */
+
+.card-up {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.card-up.hovered .text-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card-up-img1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.pic-inside {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease-in-out;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.text-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    color: white;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.text-overlay h4 {
+    margin: 0 0 10px 0;
+    font-size: 25px;
+    font-weight: 400;
+
+
+    color: rgba(255, 255, 255, 0.90);
+font-family: "IBM Plex Sans";
+/* font-style: normal; */
+font-weight: 300;
+line-height: 28px; /* 125% */
+}
+
+.text-overlay p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 300;
+
+
+
+    color: rgba(255, 255, 255, 0.80);
+font-family: Inter;
+font-weight: 300;
+line-height: var(--Title-Large-Line-Height, 24px); /* 175% */
+}
+
+.img-container {
+    padding-left: 10vw; /* Responsive padding */
+    padding-right: 10vw; /* Responsive padding */
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.img-container-img {
+    width: 100%;
+    height: auto;
+    max-width: 950px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (min-width: 1440px) {
+   
+
+    .img-container {
+        padding-left: 80px;
+        /* padding-right: 211px; */
+    }
+}
+
+@media (max-width: 968px) {
+    .four-box-container {
+        padding: 0 20px; /* Further reduce padding for tablets */
+    }
+
+    .card-up {
+        height: 400px; /* Adjust height for smaller screens */
+    }
+
+    .img-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .four-box-container {
+        padding: 0 10px; /* Minimal padding for mobile */
+    }
+
+    .card-up {
+        max-width: 100%; /* Full width on mobile */
+    }
+
+    .img-container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+ /* three hover boxes */
+ .card1 {
+    width: 100%;
+    height: 380px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+.card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(104, 104, 104, 0.32);
+    backdrop-filter: blur(5px);
+    color: white;
+    padding: 15px;
+    transition: all 0.8s ease;
+}
+
+.card1:hover .card-content {
+    opacity: 1;
+    background-color: rgba(104, 104, 104, 0.4);
+}
+
+.card-title {
+    color: #FFF;
+    font-family: 'IBM Plex Sans';
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.card-description {
+    color: rgba(255, 255, 255, 0.80);
+    font-family: 'IBM Plex Sans';
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    overflow: hidden;
+    max-height: 3.6em;
+    transition: max-height 0.8s ease;
+}
+
+.card1:hover .card-description {
+    max-height: 200px;
+}
+
+.card-btn-static {
+    font-family: "IBM Plex Sans";
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 6px 16px;
+    font-weight: 300;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.8s ease;
+}
+
+.card-btn-static:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 576px) {
+    .card1 {
+        height: 350px;
+    }
+}
+
+@media (min-width: 768px) {
+    .card1 {
+        height: 380px;
+    }
+}
+
+@media (min-width: 992px) {
+    .card1 {
+        height: 400px;
+    }
+}
+
+/* Bootstrap Grid Adjustment */
+.row.blog-card {
+    justify-content: center;
+    margin: 0 -8px;
+}
+
+.row.blog-card > [class^="col-"] {
+    padding:23px;
+}
+/* LAST_SEC_CONTAINER */
+.book-demo {
+    background-image: url(../images/backgrounds/last_sec_bg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+}
+
+.text-background-blur {
+    position: relative;
+    z-index: 1;
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.30);
+
+    padding: 150px 150px 90px;
+    border-radius: 10px;
+    width: 60%;
+    height: 100%;
+
+    line-height: 20px;
+}
+
+.text-background-blur p {
+    font-family: 'IBM Plex Sans';
+    font-size: 25px;
+    color: #ffffff;
+    font-weight: 400;
+
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #000000;
+    /* color: #fff; */
+    padding: 20px;
+    /* text-align: center; */
+}
+
+.first_link {
+    font-family: 'IBM Plex Sans';
+    font-size: 14px;
+    color: #a0a0a0;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.footer_links {
+    margin-bottom: 20px;
+    /* padding: 0; */
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 300;
+}
+
+/*
+.child {
+}
+*/
+
+.child.active {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-left: 3px solid #000;
+}
+
+/*
+.child h5 {
+}
+*/
+
+.card-up.hovered .text-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
